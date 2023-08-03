@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 1.0.1
+
+### Cambios en la organización de archivos:
+
+- Archivo `backend.php`: Contiene las funciones relacionadas con el backend del plugin.
+- Archivo `frontend.php`: Contiene las funciones relacionadas con el frontend del plugin.
+- Archivo `cron.php`: Contiene las funciones relacionadas con la programación de tareas cron para actualizar los precios.
+
+### Funciones Backend:
+
+- Se ha agregado un registro de errores en el caso que no pueda obtener el API del Dolar Blue
+
 ## Version 1.0
 
 ### Funciones Backend:
