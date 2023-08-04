@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 1.1.0
+
+- Archivo `dolarBlue.php`: Contiene la funcionalidad de agregar la etiqueta dinamica en Elementor Pro.
+- Actualizado Plugin principal para incluir el archivo `dolarBlue.php`.
+
+### Funciones Elementor / dolarBlue:
+
+- `dynamic_tags_manager`: Registra la etiqueta dinamica en Elementor.
+
 ## Version 1.0.1
 
 ### Cambios en la organización de archivos:
@@ -10,7 +19,7 @@
 
 ### Funciones Backend:
 
-- Se ha agregado un registro de errores en el caso que no pueda obtener el API del Dolar Blue
+- Se ha agregado un registro de errores en el caso que no pueda obtener el API del Dolar Blue.
 
 ## Version 1.0
 

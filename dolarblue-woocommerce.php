@@ -24,3 +24,6 @@ require_once plugin_dir_path(__FILE__) . 'inc/frontend.php';
 
 // Incluir el archivo del cron
 require_once plugin_dir_path(__FILE__) . 'inc/cron.php';
+
+// Inlcuir la etiqueta dinamica de Elementor
+require_once plugin_dir_path(__FILE__) . 'inc/elementor/dolarBlue.php';
