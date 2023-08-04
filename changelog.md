@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.1.2
+
+- Archivo `wp-dolarblue.php`: Se realizó un cambio de nombre en el plugin para que sea exclusivamente reconocible por WordPress.
+- Se sube el Plugin al Repositorio de Wordpress.
+
 ## Version 1.1.1
 
 - Archivo `dolarblue.php`: Cambio de nombre del plugin por derechos de WooCommerce.
