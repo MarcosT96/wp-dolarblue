@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.1.1
+
+- Archivo `dolarblue.php`: Cambio de nombre del plugin por derechos de WooCommerce.
+
 ## Version 1.1.0
 
 - Archivo `dolarBlue.php`: Contiene la funcionalidad de agregar la etiqueta dinamica en Elementor Pro.
