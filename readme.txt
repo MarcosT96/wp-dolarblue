@@ -1,8 +1,49 @@
+=== DolarBlue WP ===
+Contributors: grupomet
+Tags: inflacion, dolar blue, dolar, argentina, precio, precio dolar, precio dolar blue, cambiar precio
+Requires at least: 6.1.0
+Tested up to: 6.2.2
+Requires PHP: 7.4
+Stable tag: 1.1.4
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Harto de tener que ajustar constantemente los precios debido a la inflación? Esta herramienta te permite mantener los precios actualizados en toda tu tienda de forma automática, ajustándolos según la cotización del "Dólar Blue". También tienes la opción de utilizar el "Dólar Oficial" o establecer un valor personalizado manualmente.
+
+== Description ==
+Crea un campo automaticamente de los precios de los productos WooCommerce. 
+
+Los precios son editados automaticamente desde la base de datos. 
+
+Utiliza la API de bluelytics para traer los datos del Dolar Blue.
+
+Las actualizaciones de precios se realizan de forma automatica cada 15 minutos. 
+
+Esta es la primer version del plugin, toda sugerencia, opinion o critica sera bienvenida. 
+
+[Reporta cualquier error](https://wordpress.org/support/plugin/dolarblue-wp/) que encuentres si piensas que esta relacionado al plugin.
+
+¿Podrias por favor [dejar un review positivo aqui](https://wordpress.org/support/plugin/dolarblue-wp/reviews/#new-post)? Eso seria una gran ayuda. Gracias.
+
+[Contacta al autor](https://profiles.wordpress.org/grupomet/)  del plugin para enviarle un mensaje.
+
+
+== Frequently Asked Questions == 
+=Que pasa con los precios si desactivo el plugin=
+Los precios son actualizados desde la base de datos, por lo que al desactivar o desinstalar el plugin nada cambiara
+
+=Como vuelvo a ingresar los precios en mis productos al desactivar el plugin?=
+Simplemente utiliza el campo "precio" en la pagina de edicion de producto, como lo harias normalmente. Si el plugin sigue activo, asegurate de que el campo "valor TDC" se encuentra vacio
+
+== LIMITACIONES ==
+
+* NO SOPORTA PRODUCTOS VARIABLES AÚN
+
+== Screenshots == 
+
+== Changelog == 
+
 # Changelog
-
-## Version 1.1.4
-
-- Archivo `readme.txt`: Se agrego el Readme.txt para que se permita subir al Repositorio de Wordpress.
 
 ## Version 1.1.3
 
@@ -63,3 +104,5 @@
 ### Otras funciones:
 
 - `get_dolar_blue_value()`: Obtiene el valor del dólar blue desde la API.
+
+

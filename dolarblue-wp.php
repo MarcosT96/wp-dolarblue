@@ -3,10 +3,10 @@
 Plugin Name: DolarBlue WP
 Plugin URI: https://github.com/MarcosT96/dolarblue-wp
 Description: Este plugin convierte los precios de WooCommerce a ARS utilizando el valor del dólar blue obtenido de una API externa.
-Version: 1.1.3
+Version: 1.1.4
 Author: Marcos Tomassi - Grupo MET
 Author URI: https://www.grupo-met.com
-License: GPLv2 or later
+License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dolarblue
 Domain Path: /languages
