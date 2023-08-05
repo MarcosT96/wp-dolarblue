@@ -3,6 +3,9 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
+// Incluir el archivo del backend
+require_once plugin_dir_path(__FILE__) . '/backend.php';
+
 // Función para actualizar los precios en ARS de todos los productos
 function update_product_prices_in_ars()
 {
