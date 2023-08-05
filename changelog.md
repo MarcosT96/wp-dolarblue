@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.1.4.1
+
+- Archivo `readme.md`: Se agrego el Readme.md para que se muestre una informacion en el github.
+
 ## Version 1.1.4
 
 - Archivo `readme.txt`: Se agrego el Readme.txt para que se permita subir al Repositorio de Wordpress.
