@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.1.4.2
+
+- Archivo `cron.php`: Se agrego el require del backend.php para que ejecute la funcion `get_dolar_blue_value()`.
+
 ## Version 1.1.4.1
 
 - Archivo `readme.md`: Se agrego el Readme.md para que se muestre una informacion en el github.
