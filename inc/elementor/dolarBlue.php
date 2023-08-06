@@ -19,9 +19,9 @@ add_action('elementor/dynamic_tags/register', function ($dynamic_tags_manager) {
     {
 
         /**
-         * Get dynamic tag name.
+         * Obtiene el nombre de la etiqueta dinamica.
          *
-         * Retrieve the name of the ACF average tag.
+         * Devuelve el nombre de la etiqueta de Dolar Blue.
          *
          * @since 1.0.0
          * @access public
@@ -33,9 +33,9 @@ add_action('elementor/dynamic_tags/register', function ($dynamic_tags_manager) {
         }
 
         /**
-         * Get dynamic tag title.
+         * Obtiene el titulo de la etiqueta dinamica.
          *
-         * Returns the title of the ACF average tag.
+         * Devuelve el titulo de la etiqueta de Dolar Blue.
          *
          * @since 1.0.0
          * @access public
@@ -47,9 +47,9 @@ add_action('elementor/dynamic_tags/register', function ($dynamic_tags_manager) {
         }
 
         /**
-         * Get dynamic tag groups.
+         * Obtiene el grupo de la etiqueta dinamica.
          *
-         * Retrieve the list of groups the ACF average tag belongs to.
+         * Devuelve la lista de grupos de la etiqueta de Dolar Blue.
          *
          * @since 1.0.0
          * @access public
@@ -61,9 +61,9 @@ add_action('elementor/dynamic_tags/register', function ($dynamic_tags_manager) {
         }
 
         /**
-         * Get dynamic tag categories.
+         * Obtiene la categoria de la etiqueta dinamica
          *
-         * Retrieve the list of categories the ACF average tag belongs to.
+         * Devuelve la lista de categorias de la etiqueta de Dolar Blue.
          *
          * @since 1.0.0
          * @access public
@@ -75,9 +75,9 @@ add_action('elementor/dynamic_tags/register', function ($dynamic_tags_manager) {
         }
 
         /**
-         * Render tag output on the frontend.
+         * Renderiza la salida en el frontend.
          *
-         * Written in PHP and used to generate the final HTML.
+         * Escrito en PHP y usado para generar el HTML final.
          *
          * @since 1.0.0
          * @access public
