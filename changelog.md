@@ -1,32 +1,42 @@
 # Changelog
 
-## Version 1.1.4.2
+### Version 1.1.5 (2023-08-06)
+
+- **Añadido:** Soporte para productos variables.
+- **Añadido:** Campo `precio_dolar_blue` para variaciones de productos en el backend.
+- **Mejora:** El campo `precio_dolar_blue` se calcula automáticamente en base al precio de la variación y al valor del "dólar blue".
+- **Mejora:** Modificado el subtotal mostrado en la página del carrito para reflejar el valor de `precio_dolar_blue`.
+- **Mejora:** Modificado el subtotal mostrado en `product-name` en la página de checkout para reflejar el valor de `precio_dolar_blue`.
+- **Refactorización:** Código mejorado para seguridad y optimización.
+- **Corrección:** Correcciones menores y mejoras en la usabilidad en el backend.
+
+### Version 1.1.4.2
 
 - Archivo `cron.php`: Se agrego el require del backend.php para que ejecute la funcion `get_dolar_blue_value()`.
 
-## Version 1.1.4.1
+### Version 1.1.4.1
 
 - Archivo `readme.md`: Se agrego el Readme.md para que se muestre una informacion en el github.
 
-## Version 1.1.4
+### Version 1.1.4
 
 - Archivo `readme.txt`: Se agrego el Readme.txt para que se permita subir al Repositorio de Wordpress.
 
-## Version 1.1.3
+### Version 1.1.3
 
 - Archivo `dolarblue-wp.php`: Se realizó un cambio de nombre en el plugin para que sea exclusivamente reconocible por WordPress.
 - Se sube el Plugin al Repositorio de Wordpress.
 
-## Version 1.1.2
+### Version 1.1.2
 
 - Archivo `wp-dolarblue.php`: Se realizó un cambio de nombre en el plugin para que sea exclusivamente reconocible por WordPress.
 - Se sube el Plugin al Repositorio de Wordpress.
 
-## Version 1.1.1
+### Version 1.1.1
 
 - Archivo `dolarblue.php`: Cambio de nombre del plugin por derechos de WooCommerce.
 
-## Version 1.1.0
+### Version 1.1.0
 
 - Archivo `dolarBlue.php`: Contiene la funcionalidad de agregar la etiqueta dinamica en Elementor Pro.
 - Actualizado Plugin principal para incluir el archivo `dolarBlue.php`.
@@ -35,7 +45,7 @@
 
 - `dynamic_tags_manager`: Registra la etiqueta dinamica en Elementor.
 
-## Version 1.0.1
+### Version 1.0.1
 
 ### Cambios en la organización de archivos:
 
@@ -47,7 +57,7 @@
 
 - Se ha agregado un registro de errores en el caso que no pueda obtener el API del Dolar Blue.
 
-## Version 1.0
+### Version 1.0
 
 ### Funciones Backend:
 
