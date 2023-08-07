@@ -85,3 +85,84 @@ add_filter('woocommerce_cart_item_price', 'display_cart_and_checkout_prices', 10
 add_filter('woocommerce_checkout_cart_item_quantity', 'display_cart_and_checkout_prices', 10, 3);
 add_filter('woocommerce_cart_item_subtotal', 'display_cart_and_checkout_prices', 10, 3);
 add_filter('woocommerce_checkout_cart_subtotal', 'display_cart_and_checkout_prices', 10, 3);
+
+// Funcion que muestra el precio cuando es variacion
+add_filter('woocommerce_available_variation', 'modify_variation_prices_display');
+function modify_variation_prices_display($data)
+{
+    $variation_id = $data['variation_id'];
+    $product = wc_get_product($variation_id);
+    $precio_dolar_blue = get_post_meta($variation_id, 'precio_dolar_blue', true);
+
+    if ($precio_dolar_blue) {
+        $data['price_html'] = '<span class="price">' . wc_price($precio_dolar_blue) . '</span>';
+    }
+
+    return $data;
+}
+
+// Funcion que calcula el precio de la variacion en el carrito y checkout
+add_action('woocommerce_before_calculate_totals', 'adjust_cart_item_prices');
+function adjust_cart_item_prices($cart_object)
+{
+    foreach ($cart_object->cart_contents as $key => $value) {
+        $product_id = $value['product_id'];
+        $variation_id = $value['variation_id'];
+
+        if ($variation_id) {
+            $precio_dolar_blue = get_post_meta($variation_id, 'precio_dolar_blue', true);
+            if ($precio_dolar_blue) {
+                $value['data']->set_price($precio_dolar_blue);
+            }
+        }
+    }
+}
+
+// Actualiza el Precio del carrito de compras
+add_filter('woocommerce_cart_item_price', 'adjust_cart_table_item_prices', 10, 3);
+function adjust_cart_table_item_prices($price, $cart_item, $cart_item_key)
+{
+    $product = $cart_item['data'];
+    $variation_id = $cart_item['variation_id'];
+
+    if ($variation_id) {
+        $precio_dolar_blue = get_post_meta($variation_id, 'precio_dolar_blue', true);
+        if ($precio_dolar_blue) {
+            return wc_price($precio_dolar_blue);
+        }
+    }
+
+    return $price;
+}
+
+// Actualiza el Subtotal del carrito de compras
+add_filter('woocommerce_cart_item_subtotal', 'adjust_cart_table_item_subtotals', 10, 3);
+function adjust_cart_table_item_subtotals($subtotal, $cart_item, $cart_item_key)
+{
+    $product = $cart_item['data'];
+    $variation_id = $cart_item['variation_id'];
+
+    if ($variation_id) {
+        $precio_dolar_blue = get_post_meta($variation_id, 'precio_dolar_blue', true);
+        if ($precio_dolar_blue) {
+            $subtotal_value = $precio_dolar_blue * $cart_item['quantity'];
+            return wc_price($subtotal_value);
+        }
+    }
+
+    return $subtotal;
+}
+
+// Oculta el precio minimo en el titulo de la tabla del Finalizar Compra
+add_filter('woocommerce_cart_item_name', 'adjust_checkout_product_name_price', 10);
+
+function adjust_checkout_product_name_price($product_name)
+{ ?>
+    <style>
+        span.cart-item-price {
+            display: none;
+        }
+    </style>
+<?php
+    return $product_name;
+}
