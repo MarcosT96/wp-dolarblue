@@ -37,7 +37,7 @@ Simplemente utiliza el campo "precio" en la pagina de edicion de producto, como 
 
 == LIMITACIONES ==
 
-* NO SOPORTA PRODUCTOS VARIABLES AÚN
+* NO SE HAN ENCONTRADO AUN
 
 == Screenshots == 
 
