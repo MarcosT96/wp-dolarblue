@@ -34,7 +34,7 @@ Simplemente utiliza el campo "precio" en la página de edición de producto, com
 
 ## LIMITACIONES
 
-- NO SOPORTA PRODUCTOS VARIABLES AÚN
+- NO SE HAN ENCONTRADO
 
 ## Screenshots
 
