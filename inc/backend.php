@@ -80,3 +80,39 @@ function save_product_custom_field($post_id)
     update_post_meta($post_id, 'precio_dolar_blue', $precio_dolar_blue);
 }
 add_action('woocommerce_process_product_meta', 'save_product_custom_field');
+
+// Función para mostrar el campo personalizado en el backend del producto variable
+function add_variation_custom_field($loop, $variation_data, $variation)
+{
+    $product = wc_get_product($variation->ID);
+
+    if ($product->get_sale_price()) {
+        $precio_dolar_blue = $product->get_sale_price() * get_dolar_blue_value();
+    } else {
+        $precio_dolar_blue = floatval($product->get_price()) * get_dolar_blue_value();
+    }
+
+    woocommerce_wp_text_input(
+        array(
+            'id'          => 'precio_dolar_blue[' . $loop . ']',
+            'wrapper_class' => 'form-row form-row-first',
+            'class'       => 'short wc_input_price',
+            'label'       => __('Precio en ARS (Blue)', 'dolarblue-woocommerce') . ' (' . get_woocommerce_currency_symbol() . ')',
+            'value'       => wc_format_localized_price($precio_dolar_blue),
+            'data_type'   => 'price',
+            'desc_tip'    => 'true',
+            'description' => __('Se muestra el precio en ARS basado en el valor del dólar blue.', 'dolarblue-woocommerce')
+        )
+    );
+}
+add_action('woocommerce_product_after_variable_attributes', 'add_variation_custom_field', 10, 3);
+
+// Función para guardar el valor del campo personalizado como meta data del producto variable
+function save_variation_custom_field($variation_id, $i)
+{
+    if (isset($_POST['precio_dolar_blue'][$i])) {
+        $dolar_blue_value = $_POST['precio_dolar_blue'][$i];
+        update_post_meta($variation_id, 'precio_dolar_blue', wc_clean($dolar_blue_value));
+    }
+}
+add_action('woocommerce_save_product_variation', 'save_variation_custom_field', 10, 2);
